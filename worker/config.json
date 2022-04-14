@@ -1,38 +1,32 @@
-# msedge
-è®©å°å¨œæœç´¢ç½‘é¡µæ—¶æ‰“å¼€é»˜è®¤æµè§ˆå™¨
-
-```
-//é…ç½®æ–‡ä»¶config.json
 {
 
-    //edgeåŸè·¯å¾„.
+    //edgeÔ­Â·¾¶.
     "edge_path":"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
     
-    //éœ€è¦æ›¿æ¢çš„æ³¨å†Œè¡¨å€¼.
+    //ĞèÒªÌæ»»µÄ×¢²á±íÖµ.
     ,"reg_paths":[
         {
-            "path":"è®¡ç®—æœº\\HKEY_CLASSES_ROOT\\MSEdgeHTM\\shell\\open\\command",
+            "path":"¼ÆËã»ú\\HKEY_CLASSES_ROOT\\MSEdgeHTM\\shell\\open\\command",
             "name":"",
             "value":"\"[EXE]\" --single-argument %1"
         }
         ,{
-            "path":"è®¡ç®—æœº\\HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\EdgeUpdate\\Clients\\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}",
+            "path":"¼ÆËã»ú\\HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\EdgeUpdate\\Clients\\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}",
             "name":"location",
             "value":"[DIR]"
         }
     ]
 
-    //æœç´¢å¼•æ“è®¾ç½®
+    //ËÑË÷ÒıÇæÉèÖÃ
     ,"urls":{
         
-        //é»˜è®¤æœç´¢å¼•æ“
+        //Ä¬ÈÏËÑË÷ÒıÇæ
         "default":"https://www.google.com.hk/search?q=[KEY]",
 
-        //ç™¾åº¦, æœç´¢ bd:ä¸Šæµ·å¤©æ°” å°†ä½¿ç”¨ç™¾åº¦æœç´¢ä¸Šæµ·å¤©æ°”.
+        //°Ù¶È, ËÑË÷ bd:ÉÏº£ÌìÆø ½«Ê¹ÓÃ°Ù¶ÈËÑË÷ÉÏº£ÌìÆø.
         "bd":"https://www.baidu.com/s?ie=UTF-8&wd=[KEY]",
 
-        //æ·˜å®
+        //ÌÔ±¦
         "tb":"https://s.taobao.com/search?q=[KEY]&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&ie=utf8"
     }
 }
-```
