@@ -76,7 +76,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance,
 	}
 
 	eString urlStr;
-
+	
 	do
 	{
 		auto urlsv = cmdstr.Mid("&url=", "&", true);
