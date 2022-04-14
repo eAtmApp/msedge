@@ -67,7 +67,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance,
 
 	console.set_logfile();
 	process.set_exception_dump(false);
-
+	 
 	bool isInstall = cmdstr.compare_icase("/install");
 	bool isUninstall = cmdstr.compare_icase("/uninstall");
 	if (isInstall || isUninstall)
