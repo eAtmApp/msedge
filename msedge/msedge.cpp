@@ -65,6 +65,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(lpCmdLine);
 	eString cmdstr(lpCmdLine);
 
+	console.set_logfile();
 	process.set_exception_dump(false);
 
 	bool isInstall = cmdstr.compare_icase("/install");
@@ -79,21 +80,25 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance,
 	
 	do
 	{
-		auto urlsv = cmdstr.Mid("&url=", "&", true);
-		if (urlsv.empty()) urlsv = cmdstr.Mid("&url=", "", true);
-		if (urlsv.empty()) break;
-		eString url = util::url_decode(urlsv);
+		console.log("{}", cmdstr);
+		eString url = cmdstr.get_url_paramsv("url");
+		if (url.empty()) break;
 		auto keysv = url.get_url_paramsv("q");
 
 		if (!keysv.empty())
 		{
+			console.log("key:{}", keysv);
 			urlStr = "https://www.google.com.hk/search?q=";
 			urlStr += keysv;
 		}
 		else {
 			urlStr = url;
+			if (urlStr.find("://") == std::string::npos)
+			{
+				urlStr = util::url_decode(urlStr);
+			}
 		}
-
+		console.log("url:{}", urlStr);
 	} while (false);
 	
 	if (!urlStr.empty())
